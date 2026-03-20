@@ -86,6 +86,9 @@ if choice == "yes":
     elif choice == "melted cheese":
         print("melted cheese")
         Total_cost += 0.50
+    sauce_packets = int(input("how many sauce packets would you like?").strip())
+    Total_cost += sauce_packets * 0.25
+
 # final checkout prompts
 choice = input("are you ready for checkout?").strip().lower()
 if choice == "yes":
