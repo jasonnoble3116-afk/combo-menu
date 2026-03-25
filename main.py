@@ -1,5 +1,9 @@
 # Iteration 1
 Total_cost = 0
+
+# TODO: 3.2.1 (Lists) - track the items ordered from the menu in a list instead of individual variables
+# TODO: 3.2.3 (Loops and Iterations) - use a loop to allow the user to order multiple items from the menu
+
 choice = input("what kind of taco would you like? chicken $5.25, fish $5.75, steak $6.25").strip().lower()
 if choice == "steak":
     print("Steak $6.25")
@@ -10,11 +14,13 @@ elif choice == "chicken":
 elif choice == "fish":
     print("fish $5.75")
     Total_cost += 5.75
+
 choice=input("what type of shell would you like? hard or soft?").strip()
 if choice=="hard":
     print("hard shell")
 elif choice=="soft":
     print("soft shell")
+
 choice = input("how many tacos would you like? one, two $0.50, three $1.00, four $1.50, five $2.00, six $2.50").strip()
 if choice == "one":
     print("one taco")
@@ -47,8 +53,9 @@ if choice == "yes":
     elif choice == "large":
         print("large $2.25")
         Total_cost += 2.25
-if choice == "no":
+elif choice == "no":
     print("no beverage")
+
 choice = input("what type of beverage would you like? sode, sweet tea, or water?")
 if choice == "soda":
     print("soda")
@@ -89,6 +96,11 @@ if choice == "yes":
     sauce_packets = int(input("how many sauce packets would you like?").strip())
     Total_cost += sauce_packets * 0.25
 
+
+# TODO: 3.1.3 (Combo Menu) - make sure to check for and apply a discount if the combo is ordered
+# TODO: 3.2.3 (Loops and Iterations) - prompt user to determine if another round of ordering is desired.
+
+
 # final checkout prompts
 choice = input("are you ready for checkout?").strip().lower()
 if choice == "yes":
@@ -101,8 +113,5 @@ elif choice == "no":
         if choice == "yes":
             print("large beverage $2.25 and large bag of chips $2.00")
             Total_cost += 2.25 + 2.00
-            print(f"Final total: ${Total_cost:.2f}")
-        if choice == "no":
-            print(f"Final total: ${Total_cost:.2f}")
-    else:
-        print(f"Final total: ${Total_cost:.2f}")
+
+print(f"Final total: ${Total_cost:.2f}")
