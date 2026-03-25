@@ -131,3 +131,18 @@ if choice == "Jason Noble":
         print("entered password is incorrect")
 else:
     print("entered username is incorrect")
+choice = input("would you like to place another order? (yes/no): ").strip().lower()
+if choice == "yes":
+    choice = input("Enter your username: ")
+    if choice == "Jason Noble":
+        print("entered username is correct")
+        choice = input("Enter your password: ")
+        if choice == "NobleKing26":
+            print("entered password is correct. Starting new order...")
+            restart_class = Post()
+        else:
+            print("entered password is incorrect")
+    else:
+        print("entered username is incorrect")
+elif choice == "no":
+    print("Your order has been placed and will be ready soon. Thank you choosing us. Have a great day!")
